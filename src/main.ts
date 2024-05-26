@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import './style.sass';
+import './style.scss';
 import App from './App.vue';
 
 var app = createApp(App);
