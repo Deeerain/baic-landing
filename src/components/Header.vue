@@ -52,6 +52,7 @@ const onScroll = () =>  {
 header  {
     padding: 20px 0px;
     font-size: var(--header-font-size);
+    background-color: #ffffffd8;
     width: 100%;
     position: fixed;
     transition: 0.3s ease-in-out;

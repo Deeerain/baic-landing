@@ -16,6 +16,18 @@
     box-sizing: border-box;
 }
 
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    object-fit: contain;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 .flex {
     display: flex;
 
@@ -35,7 +47,13 @@
     &-column {
         display: flex;
         flex-direction: column;
+
+        &.beetwen {
+            justify-content: space-between;
+        }
     }
+
+    
 }
 
 .container {
@@ -70,5 +88,22 @@
 
     &.simple {
         color: var(--link-simple-fg);
+    }
+}
+
+.titled-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    text-transform: uppercase;
+    gap: 1rem;
+    letter-spacing: 0.3rem;
+
+    &::after {
+        content: '';
+        border-bottom: 4px solid #23009e;
+        width: 100px;
     }
 }

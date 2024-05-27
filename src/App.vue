@@ -1,64 +1,33 @@
 <script setup lang="ts">
 import Header from  './components/Header.vue';
-import Slider from './components/Slider.vue';
-
-const carList = [
-  {
-    'id': 'car-u5',
-    'brand': 'BAIC',
-    'model': 'U5',
-    'price': '1 900 000',
-    'slides': [
-      {
-        img: "/src/assets/img/u5/1.jpg",
-        active: true,
-      },
-      {
-        img: "/src/assets/img/u5/2.jpeg",
-        active: false,
-      },
-    ]
-  },
-]
+import CarsSection from './components/CarsSection.vue';
+import ContactSection from './components/ContactSection.vue';
+import Footer from './components/Footer.vue';
 
 </script>
 
 <template>
-  <Header></Header>
+  <Header />
   <section class="poster">
   </section>
-  <section v-for="car in carList" :id="car.id" class="car">
+  <section>
     <div class="container">
-      <div class="flex-row beetwen present">
-        <div class="present__slider">
-          <Slider :slides="car.slides"/>
-        </div>
-        <div class="present__description">
-          <h2> {{ car.brand }} {{ car.model }}</h2>
-          <div class="sale-row flex-row">
-            <div class="min-sale">{{ car.price }}</div>
-          </div>
-          <div class="flex-row beetwen center">
-            <button class="btn">Кредитная ставка 7%</button>
-            <button class="btn">Гарантия 5 лет</button>
-          </div>
-        </div>
+      <div class="titled-section">
+        <h2>Модельный ряд</h2>
       </div>
     </div>
   </section>
+  <CarsSection />
+  <ContactSection />
+  <Footer />
 </template>
 
 <style scoped lang="scss">
   .poster {
     overflow: hidden;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url(./assets/img/poster.jpg);
-  }
-
-  .present {
-    &__slider {
-      width: 50%;
-    }
+    background-position: center;
   }
 </style>
