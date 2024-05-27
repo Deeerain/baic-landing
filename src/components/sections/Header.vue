@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import Container from '../Container.vue';
+import Menu from '../Menu.vue';
 
 let scroll = ref<boolean>(false);
 let header: HTMLElement;
@@ -22,7 +24,7 @@ const onScroll = () =>  {
 
 <template>
     <header :class="{'scroll': scroll}">
-        <div class="container">
+        <Container>
             <div class="logos-row flex-row beetwen center">
                 <div class="logos-col logos-col">
                     <a class="brand link simple" href="#">Официальный дилер BAIC - Аксель-Моторс</a>
@@ -33,17 +35,11 @@ const onScroll = () =>  {
                     <button class="btn">Заказать звонок</button>
                 </div>
             </div>
-        </div>
+        </Container>
         <nav>
-            <div class="container">
-                <ul class="menu flex-row beetwen center">
-                    <li><a href="#car-u5" class="link simple">BAIC U5</a></li>
-                    <li><a href="#car-x35" class="link simple">BAIC X35</a></li>
-                    <li><a href="#car-x55" class="link simple">BAIC X55</a></li>
-                    <li><a href="#car-x7" class="link simple">BAIC X7</a></li>
-                    <li><a href="#car-bj40" class="link simple">BAIC BJ40</a></li>
-                </ul>
-            </div>
+            <Container>
+                <Menu :horizontal="true" />
+            </Container>
         </nav>
     </header>
 </template>
@@ -76,8 +72,5 @@ header  {
 .brand {
     font-size: 14pt;
 }
-.menu {
-    list-style: none;
-    padding: 1rem 0px;
-}
+
 </style>
