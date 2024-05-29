@@ -6,7 +6,7 @@ import Menu from './Menu.vue';
 const sidebarStore = useSidebarStore()
 
 onMounted(() => {
-    sidebarStore.toggle()
+    // sidebarStore.toggle()
 })
 
 </script>
