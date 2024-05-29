@@ -56,13 +56,15 @@ const go_prev = () => {
 <style scoped lang="scss">
 .slider {
     position: relative;
+    overflow: hidden;
+
 
     &__slide {
         display: none;
-        max-width:100%;
-        width: auto;
+        object-fit: cover;
+        max-width: 100%;
         height: auto;
-
+        
         &.active {
             display: block;
         }

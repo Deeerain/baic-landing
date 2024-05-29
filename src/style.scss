@@ -16,6 +16,13 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
 .flex {
     display: flex;
 
@@ -35,28 +42,13 @@
     &-column {
         display: flex;
         flex-direction: column;
-    }
-}
 
-.container {
-    width: 100%;
-    margin: auto;
-
-    @media (min-width: 641px) {
-        max-width: 620px;
+        &.beetwen {
+            justify-content: space-between;
+        }
     }
 
-    @media (min-width: 961px) {
-        max-width: 940px;
-    }
-
-    @media (min-width: 1171px) {
-        max-width: 1150px;
-    }
-
-    @media (min-width: 1601px) {
-        max-width: 1420px;
-    }
+    
 }
 
 .btn {
