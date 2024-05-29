@@ -58,9 +58,13 @@ const go_prev = () => {
     position: relative;
     overflow: hidden;
 
+
     &__slide {
         display: none;
-
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+        
         &.active {
             display: block;
         }

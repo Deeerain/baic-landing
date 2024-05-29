@@ -6,7 +6,7 @@ const carList = [
   {
     'id': 'car-u5',
     'brand': 'BAIC',
-    'model': 'U5',
+    'model': 'U5 Plus',
     'price': '1 900 000',
     'slides': [
       {
@@ -46,10 +46,12 @@ const carList = [
           <div class="presenter__slider">
             <Slider :slides="car.slides"/>
           </div>
-          <div class="present__description flex-column beetwen">
-            <h2> {{ car.brand }} {{ car.model }}</h2>
-            <div class="sale-row flex-row">
-              <div class="min-sale">{{ car.price }}</div>
+          <div class="presenter__description flex-column beetwen">
+            <div class="model-text">
+              <h2> {{ car.brand }} <b>{{ car.model }}</b></h2>
+              <div class="sale-row flex-row">
+                <h3 class="min-sale">от <b>{{ car.price }}</b></h3>
+              </div>
             </div>
             <div class="flex-row center">
               <button class="btn">Кредитная ставка 7%</button>
@@ -70,7 +72,39 @@ const carList = [
 .presenter {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    height: 650px;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+    &__slider {
+      flex-shrink: 1;
+      flex-grow: 1;
+      width: 50%;
+    }
+
+    &__description {
+      flex-shrink: 1;
+      flex-grow: 1;
+      width: 50%;
+
+      .model-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 20pt;
+        align-items: start;
+
+        h2, h3 {
+          font-weight: 300;
+          line-height: 1;
+        }
+
+        .sale-row {
+          background-color: blue;
+          color: white;
+          padding: 10px 15px;
+        }
+      }
+    }
 }
 </style>

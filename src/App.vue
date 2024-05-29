@@ -18,7 +18,7 @@ import Container from './components/Container.vue';
     </Container>
   </Poster>
   <TitledSection title="Модельный ряд"/>
-  <!-- <CarsSection /> -->
+  <CarsSection />
   <TitledSection title="Контакты"/>
   <ContactSection />
   <Footer />

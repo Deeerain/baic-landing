@@ -16,12 +16,6 @@
     box-sizing: border-box;
 }
 
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    object-fit: contain;
-}
-
 body {
     display: flex;
     flex-direction: column;

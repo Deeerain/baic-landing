@@ -10,7 +10,7 @@
 <style scoped lang="scss">
 .poster {
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-image: url(../../assets/img/poster.jpg);
     background-position: center;
