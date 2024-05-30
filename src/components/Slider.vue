@@ -9,40 +9,6 @@ const props = defineProps<{
 
 let slides = reactive(props.slides);
 
-const get_current_index = () => {
-    const slide = slides.findIndex((value) => value.active == true);
-
-    return slide;
-}
-
-const go_next = () => {
-    const current_index = get_current_index();
-
-    slides[current_index].active = false;
-
-    if(current_index < slides.length - 1) {
-        slides[current_index + 1].active = true;
-    }else{
-        slides[0].active = true;
-    }
-
-    console.log(get_current_index(), slides.length)
-}
-
-const go_prev = () => {
-    const current_index = get_current_index();
-
-    slides[current_index].active = false;
-
-    if(current_index >= slides.length - 1) {
-        slides[current_index - 1].active = true;
-    }else {
-        slides[slides.length - 1].active = true;
-    }
-
-    console.log(get_current_index(), slides.length)
-}
-
 </script>
 
 <template>
