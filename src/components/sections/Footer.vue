@@ -5,10 +5,14 @@ import Container from '../Container.vue';
 <template>
     <footer>
         <Container>
-            <div class="footer-col flex-column">
-                <div class="footer-col__copyright flex-row ceneter">
-                    <p>Официальный дилер BAIC - Аксель-Архангельск</p>
-                    <p>© 2024 Аксель BAIC</p>
+            <div class="footer-col">
+                <div class="footer-col__copyright row">
+                    <div class="col">
+                        <p>Официальный дилер BAIC - Аксель-Архангельск</p>
+                    </div>
+                    <div class="col">
+                        <p>© 2024 Аксель BAIC</p>
+                    </div>
                 </div>
                 <small>ООО "АКСЕЛЬ-АРХАНГЕЛЬСК", 163062, Архангельская Область, г.о. Город Архангельск, г Архангельск, ул Папанина, д. 21, помещ. 32, ИНН: 2901257453, ОГРН: 1152901003496</small>
             </div>
@@ -20,15 +24,10 @@ import Container from '../Container.vue';
 footer {
     background-color: #000;
     color: #fff;
-    .container {
-        .footer-col {
-            height: 200px;
-            justify-content: space-around;
+    padding: 50px 0;
 
-            &__copyright {
-                gap: 2rem;
-            }
-        }
+    .footer-col__copyright {
+        margin-bottom: 40px;
     }
 }
 </style>

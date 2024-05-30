@@ -22,45 +22,15 @@ body {
     gap: 3rem;
 }
 
-
-.flex {
-    display: flex;
-
-    &-row {
-        display: flex;
-        flex-direction: row;
-
-        &.beetwen {
-            justify-content: space-between;
-        }
-
-        &.center {
-            align-items: center;
-        }
-    }
-
-    &-column {
-        display: flex;
-        flex-direction: column;
-
-        &.beetwen {
-            justify-content: space-between;
-        }
-    }
-
-    
-}
-
-.btn {
-    background-color: var(--f-button-bg);
-    color: var(--f-button-fg);
-    padding: 1rem 2rem;
-}
-
 .link {
     text-decoration: none;
 
     &.simple {
         color: var(--link-simple-fg);
     }
+}
+
+.anchor {
+    position: relative;
+    top: -150px;
 }

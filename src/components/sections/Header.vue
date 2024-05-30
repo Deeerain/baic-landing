@@ -2,7 +2,11 @@
 import { ref, onMounted } from 'vue';
 import Container from '../Container.vue';
 import Menu from '../Menu.vue';
+import { useSidebarStore } from '../../store/sidebarStore';
 
+
+
+const sidebar_store = useSidebarStore()
 let scroll = ref<boolean>(false);
 let header: HTMLElement;
 
@@ -25,22 +29,27 @@ const onScroll = () =>  {
 <template>
     <header :class="{'scroll': scroll}">
         <Container>
-            <div class="logos-row flex-row beetwen center">
-                <div class="logos-col logos-col">
+            <div class="logos-row d-flex flex-row justify-content-between align-items-center">
+                <a href="#" class="ham-block d-flex d-md-none sb-toggle-left">
+                    <div class="hamburger">
+                        <img src="../../assets/svg/menu.svg" alt="" class="img-fluid" @click="sidebar_store.toggle">
+                    </div>
+                </a>
+                <div class="logos-col">
                     <a class="brand link simple" href="#">Официальный дилер BAIC - Аксель-Моторс</a>
                 </div>
-                <div class="contacts-col flex-row beetwen center">
-                    <p>Папанина, 21</p>
-                    <a class="link simple number" href="tel:+7912345678">+7912345678</a>
+                <div class="address-col d-flex flex-row align-items-center gap-1 ">
+                    <p class="d-none d-md-block">Папанина, 21</p>
+                    <a class="link simple number" href="tel:+7912345678">
+                        <span>+7912345678</span>
+                        <img src="../../assets/img/svg/call-w.svg" alt="" class="img-fluid d-block d-md-none">
+                        <img src="../../assets/img/svg/call.svg" alt="" class="img-fluid d-block d-md-none scrolled">
+                    </a>
                     <button class="btn">Заказать звонок</button>
                 </div>
             </div>
         </Container>
-        <nav>
-            <Container>
-                <Menu :horizontal="true" />
-            </Container>
-        </nav>
+        <Menu :horizontal="true" />
     </header>
 </template>
 
@@ -59,18 +68,4 @@ header  {
         box-shadow: 2px 2px 5px rgba($color: #6e6e6e, $alpha: .6);
     }
 }
-
-.contacts-col,
-.logos-col {
-    gap: 6rem;
-}
-
-.number, .brand {
-    font-weight: bold;
-}
-
-.brand {
-    font-size: 14pt;
-}
-
 </style>
