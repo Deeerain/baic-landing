@@ -42,8 +42,8 @@ const onScroll = () =>  {
                     <p class="d-none d-md-block">Папанина, 21</p>
                     <a class="link simple number" href="tel:+7912345678">
                         <span>+7912345678</span>
-                        <img src="../../assets/img/svg/call-w.svg" alt="" class="img-fluid d-block d-md-none">
-                        <img src="../../assets/img/svg/call.svg" alt="" class="img-fluid d-block d-md-none scrolled">
+                        <img src="../../assets/svg/call-w.svg" alt="" class="img-fluid d-block d-md-none">
+                        <img src="../../assets/svg/call.svg" alt="" class="img-fluid d-block d-md-none scrolled">
                     </a>
                     <button class="btn">Заказать звонок</button>
                 </div>
